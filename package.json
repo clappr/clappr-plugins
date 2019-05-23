@@ -69,7 +69,7 @@
     "uglify-js": "^3.3.12",
     "url-loader": "^0.6.2",
     "webpack": "^3.11.0",
-    "webpack-bundle-analyzer": "^2.11.1",
+    "webpack-bundle-analyzer": "^3.3.2",
     "webpack-dev-server": "^2.11.1",
     "yargs": "^11.0.0"
   },
