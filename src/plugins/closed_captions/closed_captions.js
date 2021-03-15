@@ -96,13 +96,11 @@ export default class ClosedCaptions extends UICorePlugin {
   }
 
   setCurrentContextMenuElement(trackId) {
-    if (this._trackId !== trackId) {
-      this.contextMenuElement().removeClass('current')
-      this.contextMenuElement(trackId).addClass('current')
-      const method = trackId > -1 ? 'addClass' : 'removeClass'
-      this.$ccButton[method]('enabled')
-      this._trackId = trackId
-    }
+    this.contextMenuElement().removeClass('current')
+    this.contextMenuElement(trackId).addClass('current')
+    const method = trackId > -1 ? 'addClass' : 'removeClass'
+    this.$ccButton[method]('enabled')
+    this._trackId = trackId
   }
 
   renderCcButton() {
@@ -121,6 +119,9 @@ export default class ClosedCaptions extends UICorePlugin {
     this.$ccButton = this.$el.find('button.cc-button[data-cc-button]')
     this.$ccButton.append(ccIcon)
     this.$el.append(this.style)
+
+    if (this.container)
+      this.setCurrentContextMenuElement(this.container.closedCaptionsTrackId)
   }
 
   render() {
