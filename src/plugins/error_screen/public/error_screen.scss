@@ -10,14 +10,16 @@ div.player-error-screen {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 2000;
-  display: flex !important;
-  flex-direction: column;
-  justify-content: center;
 
   &__content[data-error-screen] {
     font-size: 14px;
     color: #CCCACA;
     margin-top: 45px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   &__title[data-error-screen] {
