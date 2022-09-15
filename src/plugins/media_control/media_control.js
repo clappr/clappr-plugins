@@ -359,7 +359,6 @@ export default class MediaControl extends UICorePlugin {
     // set the new container to match the volume of the last one
     this.setInitialVolume()
     this.changeTogglePlay()
-    this.bindContainerEvents()
     this.settingsUpdate()
     this.container && this.container.trigger(Events.CONTAINER_PLAYBACKDVRSTATECHANGED, this.container.isDvrInUse())
     this.container && this.container.mediaControlDisabled && this.disable()
