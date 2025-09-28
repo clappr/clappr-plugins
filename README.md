@@ -1,3 +1,7 @@
+# This Project was moved to the Clappr Monorepo
+[clappr monorepo](https://github.com/clappr/clappr)
+
+----
 <h1>
 Clappr-plugins
 </h1>
